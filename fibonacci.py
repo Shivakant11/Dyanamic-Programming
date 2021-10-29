@@ -1,10 +1,15 @@
+def Fibonacci(n):
+	if n<0:
+		print("Incorrect Input")
 
-def fibonacci(n):
-	f = [0, 1]
+	elif n==0:
+		return 0
+
+	elif n==1:
+		return 1
 	
-	
-	for i in range(2, n+1):
-		f.append(f[i-1] + f[i-2])
-	return f[n]
-	
-print(fibonacci(9))
+	else:
+		return Fibonacci(n-1) + Fibonacci(n-2)
+
+x= int(input())
+print(Fibonacci(x))
